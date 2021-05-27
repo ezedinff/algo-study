@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import * as chalk from 'chalk';
-import { bubbleSort, insertionSort, quickSort } from './src/sorting-searching/sort';
+import { bubbleSort, insertionSort, mergeSort, quickSort } from './src/sorting-searching/sort';
 // import * as Program from 'commander';
 
 // const logPassedArgs = ((args) => console.log(chalk.cyan(JSON.stringify(args))));
@@ -23,8 +23,8 @@ const randomArr = (length: number) => {
     }
     return newArr;
 }
-const arr = randomArr(5);
-//const arr = [47,0,70,52,62,8,20,79,65,70];
+// const arr = randomArr(5);
+const arr = [47,0,70,52,62,8,20,79,65,70];
 console.log(chalk.cyan(arr));
 
 
@@ -37,4 +37,8 @@ console.log(chalk.green(insertionSortedArr));
 
 const quickSortedArr = quickSort(arr);
 console.log(chalk.green(quickSortedArr));
+
+const mergeSortedArr = mergeSort(arr);
+console.log(chalk.green(mergeSortedArr));
+
 

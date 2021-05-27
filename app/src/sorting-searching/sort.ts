@@ -96,6 +96,37 @@ const quickSort = (array: Array<number>) => {
  * 
  * @param array 
  */
-const mergeSort = (array: Array<number>) => {}
+const mergeSort = (array: Array<number>) => {
+    if (array.length) {
+        let mid = Math.floor(array.length / 2);
+        let left = array.slice(0, mid);
+        let right = array.slice(mid + 1, array.length - 1);
+        mergeSort(left);
+        mergeSort(right);
+        let i = 0, j = 0, k = 0;
+        while (i < left.length && j < right.length) {
+            if (left[i] < right[j]) {
+                array[k] = left[i];
+                i+=1;
+            } else {
+                array[k] = right[j];
+                j+=1;
+            }
+            k += 1;
+        }
+
+        while (i < left.length) {
+            array[k] = left[i];
+            i+=1;
+            k+=1;
+        }
+        while (j < right.length) {
+            array[k] = right[j];
+            j+=1;
+            k+=1;
+        }
+    }
+    return array;
+}
 
 export {bubbleSort, insertionSort, quickSort, mergeSort};

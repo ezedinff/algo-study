@@ -7,6 +7,11 @@
         - [System design primer](https://github.com/donnemartin/system-design-primer)
     - [Elements of Programming Interviews in python](https://www.amazon.com/Elements-Programming-Interviews-Python-Insiders/dp/1537713949)
         - optional book [Cracking the coding interview]
+    - [List of algorithms](https://en.wikipedia.org/wiki/List_of_algorithms)
+## books
+[x] introduction to algorithm
+[] algorithm design
+[] algorithm unlocked
 ### Topics should be covered
 
 - Primitive Types

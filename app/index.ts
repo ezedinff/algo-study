@@ -3,6 +3,8 @@
 import * as chalk from 'chalk';
 import { removeDuplicates } from './src/fundamentals/array';
 import { reverseString, reverseString2 } from './src/fundamentals/recursion';
+import { MyEmitter } from './src/node/event-driven';
+import server from './src/node/steams';
 import { findDuplicateNum, findMinFromRotatedArray, findMinFromRotatedArrayWhenDuplicateItemExist, intersection,
      intersection2, isPerfectSquare, naiveSearch, twoSum2 } from './src/sorting-searching/search';
 import { bubbleSort, insertionSort, mergeSort, quickSort } from './src/sorting-searching/sort';
@@ -20,13 +22,13 @@ import { bubbleSort, insertionSort, mergeSort, quickSort } from './src/sorting-s
 //   .action(logPassedArgs);
 
 // Program.parse(process.argv);
-const randomArr = (length: number) => {
-    const newArr = [];
-    for (let i = 0; i < length; i++) {
-        newArr.push(Math.floor(Math.random() * 1000))
-    }
-    return newArr;
-}
+// const randomArr = (length: number) => {
+//     const newArr = [];
+//     for (let i = 0; i < length; i++) {
+//         newArr.push(Math.floor(Math.random() * 1000))
+//     }
+//     return newArr;
+// }
 // const arr = randomArr(5);
 //const arr = [2,3,4,5,1];
 // console.log(chalk.cyan(arr));
@@ -66,4 +68,14 @@ console.log(chalk.green(n)); */
 /* const m = findDuplicateNum([3,1,3,4,2]);
 console.log(chalk.green(m)); */
 //reverseString2(["h","e","l","l","o"])
-console.log(removeDuplicates([1,1,2]));
+// console.log(removeDuplicates([1,1,2]));
+
+
+
+
+// const me = new MyEmitter();
+// me.on('begin', (message: string) => console.log(message));
+// me.on('end', (message: string) => console.log(message));
+// me.execute(() => console.log('*** Executing task ***'));
+
+server.listen(8000);

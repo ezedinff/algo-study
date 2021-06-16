@@ -1,6 +1,12 @@
-import { Collection } from ".";
+/**
+ * @author Ezedin Fedlu
+ * 
+ * stack implementation
+ */
 
-interface IStack<T> {
+import { Collection } from "../helper";
+
+ interface IStack<T> {
     push(item: T): void;
     size(): number;
     peek(): T | undefined;
@@ -18,8 +24,3 @@ class Stack<T> extends Collection<T> implements IStack<T> {
         return this.storage.pop();
     }
 }
-
-const numberStack = new Stack<number>();
-numberStack.push(5);
-numberStack.push(8);
-numberStack.peek();

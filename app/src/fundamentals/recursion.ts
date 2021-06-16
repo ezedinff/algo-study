@@ -85,3 +85,24 @@ const searchFromBinaryTree = (root: TreeNode | null, val: number): TreeNode | nu
  }
 // Recurrence Relation
 // - > the result of a problem and the 
+
+const store = new Map<number, number>();
+function fib(n: number): number {
+    if (n <= 1) return n;
+    let n1 = store.get(n - 1) ?? fib(n - 1);
+    let n2 = store.get(n - 2) ?? fib(n - 2);
+    store.set(n, n1 + n2);
+    return n1 + n2;
+};
+
+
+const fib2 = (n: number) => {
+    if (n <= 1) return n;
+    let prev = 0, prevPrev = 1, res = 0;
+    for (let i = 0; i < n; i++) {
+        res = prev + prevPrev;
+        prevPrev = prev;
+        prev = res;
+    }
+    return res;
+}

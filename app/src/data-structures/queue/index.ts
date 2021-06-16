@@ -1,6 +1,11 @@
-import { Collection } from "./index";
+/**
+ * @author Ezedin Fedlu
+ * Queue implementation
+ */
 
-interface IQueue<T> {
+import { Collection } from "../helper";
+
+ interface IQueue<T> {
     enqueue(item: T): void;
     dequeue(): T | undefined;
     size(): number;
